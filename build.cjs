@@ -1,0 +1,1 @@
+'use strict';const fs=require('node:fs');const input=JSON.parse(fs.readFileSync('revision-source.json','utf8'));if(![1,2].includes(input.revision))throw new Error('QA_REVISION_INVALID');fs.writeFileSync('revision.json',JSON.stringify(input));console.log('MANAGED_NATIVE_QA_BUILD_COMPLETE');
